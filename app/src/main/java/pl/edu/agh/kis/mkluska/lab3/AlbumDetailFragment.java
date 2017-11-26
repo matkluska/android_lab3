@@ -32,7 +32,7 @@ public class AlbumDetailFragment extends Fragment {
             Activity activity = this.getActivity();
             CollapsingToolbarLayout appBarLayout = activity.findViewById(R.id.toolbar_layout);
             if (appBarLayout != null) {
-                appBarLayout.setTitle(album.getAlbum());
+                //todo set appBar title
             }
         }
     }
@@ -42,13 +42,8 @@ public class AlbumDetailFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.album_detail, container, false);
 
-        // Show the album content as text in a TextViews.
         if (album != null) {
-            ((TextView) rootView.findViewById(R.id.album_name)).setText(album.getAlbum());
-            ((TextView) rootView.findViewById(R.id.artist_name)).setText(album.getArtist());
-            ((TextView) rootView.findViewById(R.id.genre)).setText(album.getGenre());
-            ((TextView) rootView.findViewById(R.id.tracksNumber)).setText(Integer.toString(album.getTracks()));
-            ((TextView) rootView.findViewById(R.id.year)).setText(Integer.toString(album.getYear()));
+            //todo set text views with according album properties
         }
 
         return rootView;

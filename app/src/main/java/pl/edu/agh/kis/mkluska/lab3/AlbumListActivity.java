@@ -1,7 +1,5 @@
 package pl.edu.agh.kis.mkluska.lab3;
 
-import android.content.Context;
-import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -71,19 +69,22 @@ public class AlbumListActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Album album = (Album) view.getTag();
                 if (mTwoPane) {
-                    Bundle arguments = new Bundle();
-                    arguments.putString(AlbumDetailFragment.ARG_ITEM_ID, album.getId());
-                    AlbumDetailFragment fragment = new AlbumDetailFragment();
-                    fragment.setArguments(arguments);
-                    mParentActivity.getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.album_detail_container, fragment)
-                            .commit();
+                    //todo Create the detail fragment with argument AlbumDetailFragment.ARG_ITEM_ID and add it to the activity using a fragment transaction.
+//                    Bundle arguments = new Bundle();
+//                    arguments.putString();
+//
+//                    create fragment and set arguments
+//
+//                    mParentActivity.getSupportFragmentManager().beginTransaction()
+//                            .replace(R.id.album_detail_container, fragment)
+//                            .commit();
                 } else {
-                    Context context = view.getContext();
-                    Intent intent = new Intent(context, AlbumDetailActivity.class);
-                    intent.putExtra(AlbumDetailFragment.ARG_ITEM_ID, album.getId());
-
-                    context.startActivity(intent);
+                    //todo start AlbumDetailActivity with AlbumDetailFragment.ARG_ITEM_ID argument
+//                    Context context = view.getContext();
+//                    Intent intent = new Intent(context, );
+//                    intent.putExtra();
+//
+//                    context.startActivity(intent);
                 }
             }
         };

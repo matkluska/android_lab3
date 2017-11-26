@@ -14,7 +14,7 @@ public class AlbumDetailActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_album_detail);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.detail_toolbar);
+        Toolbar toolbar = findViewById(R.id.detail_toolbar);
         setSupportActionBar(toolbar);
 
         // Show the Up button in the action bar.
@@ -33,16 +33,16 @@ public class AlbumDetailActivity extends AppCompatActivity {
         // http://developer.android.com/guide/components/fragments.html
         //
         if (savedInstanceState == null) {
-            // Create the detail fragment and add it to the activity
-            // using a fragment transaction.
-            Bundle arguments = new Bundle();
-            arguments.putString(AlbumDetailFragment.ARG_ITEM_ID,
-                    getIntent().getStringExtra(AlbumDetailFragment.ARG_ITEM_ID));
-            AlbumDetailFragment fragment = new AlbumDetailFragment();
-            fragment.setArguments(arguments);
-            getSupportFragmentManager().beginTransaction()
-                    .add(R.id.album_detail_container, fragment)
-                    .commit();
+            //todo Create the detail fragment with argument AlbumDetailFragment.ARG_ITEM_ID and add it to the activity using a fragment transaction.
+//            Bundle arguments = new Bundle();
+//            get argument value from intent
+//            arguments.putString();
+//
+//            create fragment and set arguments
+//
+//            getSupportFragmentManager().beginTransaction()
+//                    .add(R.id.album_detail_container, fragment)
+//                    .commit();
         }
     }
 
