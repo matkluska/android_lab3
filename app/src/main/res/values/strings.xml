@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Albums</string>
+    <string name="title_album_detail">Album Detail</string>
+    <string name="album_name">Album Name</string>
+    <string name="artist_name">Artist Name</string>
+    <string name="genre">Genre</string>
+    <string name="tracks_number">Number of tracks</string>
+    <string name="year">Year</string>
+</resources>
